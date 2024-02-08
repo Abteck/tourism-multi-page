@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/input.css" />
+    <script src="./main.js" defer></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body
+    class="min-h-screen lg:flex lg:justify-center bg-[url('./img/crew/bg-crew-mobile.jpg')] md:bg-[url('./img/crew/bg-crew-tablet.jpg')] lg:bg-[url('./img/crew/bg-crew-desk.jpg')] text-light-blue font-Bellefair"
+  >
+    <header
+      class="w-full lg:fixed p-7 md:pr-0 lg:top-0 text-white flex justify-between items-center lg:pl-12"
+    >
+      <h1 class="">
+        <img src="./img/shared/logo.svg" alt="logo" class="w-10" />
+      </h1>
+      <hr
+        class="w-[400px] h-[0.1px] bg-gray-400 opacity-20 absolute top-1/2 right-1/2 z-20 hidden lg:block"
+      />
+      <!-- mobile menu -->
+      <ul
+        class="menu fixed h-full pt-24 pl-5 space-x-0 space-y-7 top-0 bottom-0 w-64 md:w-auto md:static md:space-y-0 md:pt-5 md:pl-0 md:flex md:space-x-8 tracking-widest font-thin md:py-5 lg:pr-24 md:px-3 lg:pl-16 text-xs"
+      >
+        <li
+          class="active relative after:absolute after:-bottom-5 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all md:after:hover:w-full"
+        >
+          <a href="index.html" class="flex gap-1"
+            ><span class="font-bold inline">00</span> HOME</a
+          >
+        </li>
+        <li
+          class="relative after:absolute after:-bottom-5 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all md:after:hover:w-full"
+        >
+          <a href="destination-moon.html" class="flex gap-1"
+            ><span class="font-bold">01</span> DESTINATION</a
+          >
+        </li>
+        <li
+          class="active-nav relative after:absolute after:-bottom-5 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all md:after:hover:w-full"
+        >
+          <a href="crew-commander.html" class="flex gap-1"
+            ><span class="font-bold">02</span> CREW</a
+          >
+        </li>
+        <li
+          class="relative after:absolute after:-bottom-5 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all md:after:hover:w-full"
+        >
+          <a href="technology-vehicle.html" class="flex gap-1"
+            ><span class="font-bold">03</span> TECHNOLOGY</a
+          >
+        </li>
+        <!-- close button -->
+        <li
+          onclick="closeMenu()"
+          class="absolute top-0 right-3 p-2 cursor-pointer md:hidden"
+        >
+          <img src="./img/shared/icon-close.svg" alt="" />
+        </li>
+      </ul>
+
+      <!-- hamburger -->
+      <div onclick="openMenu()" class="md:hidden cursor-pointer">
+        <img src="./img/shared/icon-hamburger.svg" alt="hamburger" />
+      </div>
+    </header>
+
+    <main
+      class="flex flex-col-reverse md:flex-col lg:flex-row lg:justify-between lg:items-center max-w-4xl mx-auto w-full left-0 right-0 gap-7 mt-14 lg:gap-14 lg:relative"
+    >
+      <section
+        class="flex flex-col-reverse md:flex-col lg:flex-col gap-6 lg:gap-16 text-center lg:text-left md:mt-7"
+      >
+        <h2
+          class="tracking-[0.3rem] font-barlow text-xs lg:text-lg text-white absolute top-20 md:top-28 lg:static w-full md:text-left md:pl-5"
+        >
+          <span class="opacity-50 font-barlow">02</span> MEET YOUR CREW
+        </h2>
+        <div class="flex flex-col gap-3 lg:gap-5 font-Bellefair">
+          <h3
+            class="text-xl lg:text-3xl opacity-50 font-extralight font-barlow tracking-widest"
+          >
+            COMMANDER
+          </h3>
+          <p class="text-3xl lg:text-5xl font-Bellefair text-white">
+            DOUGLAS HURLEY
+          </p>
+          <p
+            class="max-w-xs md:max-w-sm lg:max-w-xs font-barlow text-sm tracking-wider leading-4 mx-auto lg:mx-0"
+          >
+            Douglas Gerald Hurley is an American engineer, former Marine pilot
+            and former NASA astronaut. He launched into space for the third time
+            as commander of Crew Dragon Demo-2.
+          </p>
+        </div>
+
+        <!-- sub nav links -->
+        <ul class="crew-links flex space-x-4 justify-center lg:justify-normal">
+          <a
+            href="crew-commander.html"
+            class="active-crew w-3 h-3 active rounded-full bg-gray-500 flex"
+          ></a>
+          <a
+            href="crew-specialist.html"
+            class="w-3 h-3 rounded-full bg-gray-500 flex"
+          ></a>
+          <a
+            href="crew-pilot.html"
+            class="w-3 h-3 rounded-full bg-gray-500 flex"
+          ></a>
+          <a
+            href="crew-engineer.html"
+            class="w-3 h-3 rounded-full bg-gray-500 flex"
+          ></a>
+        </ul>
+      </section>
+      <section class="mx-auto lg:mx-0 w-full px-5 lg:w-auto">
+        <div class="w-full">
+          <img
+            src="./img/crew/image-douglas-hurley.png"
+            alt=""
+            class="w-56 md:w-72 lg:w-96 mx-auto lg:mx-0 lg:absolute right-0 bottom-0"
+          />
+          <hr class="opacity-35 bg-light-blue md:hidden" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

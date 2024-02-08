@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/input.css" />
+    <script src="./main.js" defer></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body
+    class="min-h-screen lg:flex lg:justify-center lg:items-center bg-[url('./img/destination/bg-dest-mobile.jpg')] md:bg-[url('./img/destination/bg-dest-tablet.jpg')] lg:bg-[url('./img/destination/bg-dest-desk.jpg')] text-light-blue font-Bellefair pb-10"
+  >
+    <header
+      class="w-full lg:fixed p-7 md:pr-0 lg:top-0 text-white flex justify-between items-center lg:pl-12"
+    >
+      <h1 class="">
+        <img src="./img/shared/logo.svg" alt="logo" class="w-10" />
+      </h1>
+      <hr
+        class="w-[400px] h-[0.1px] bg-gray-400 opacity-20 absolute top-1/2 right-1/2 z-20 hidden lg:block"
+      />
+      <!-- mobile menu -->
+      <ul
+        class="menu fixed h-full pt-24 pl-5 space-x-0 space-y-7 top-0 bottom-0 w-64 md:w-auto md:static md:space-y-0 md:pt-5 md:pl-0 md:flex md:space-x-8 tracking-widest font-thin md:py-5 lg:pr-24 md:px-3 lg:pl-16 text-xs"
+      >
+        <li
+          class="active relative after:absolute after:-bottom-5 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all md:after:hover:w-full"
+        >
+          <a href="index.html" class="flex gap-1"
+            ><span class="font-bold inline">00</span> HOME</a
+          >
+        </li>
+        <li
+          class="active-nav relative after:absolute after:-bottom-5 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all md:after:hover:w-full"
+        >
+          <a href="destination-moon.html" class="flex gap-1"
+            ><span class="font-bold">01</span> DESTINATION</a
+          >
+        </li>
+        <li
+          class="relative after:absolute after:-bottom-5 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all md:after:hover:w-full"
+        >
+          <a href="crew-commander.html" class="flex gap-1"
+            ><span class="font-bold">02</span> CREW</a
+          >
+        </li>
+        <li
+          class="relative after:absolute after:-bottom-5 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all md:after:hover:w-full"
+        >
+          <a href="technology-vehicle.html" class="flex gap-1"
+            ><span class="font-bold">03</span> TECHNOLOGY</a
+          >
+        </li>
+        <!-- close button -->
+        <li
+          onclick="closeMenu()"
+          class="absolute top-0 right-3 p-2 cursor-pointer md:hidden"
+        >
+          <img src="./img/shared/icon-close.svg" alt="" />
+        </li>
+      </ul>
+
+      <!-- hamburger -->
+      <div onclick="openMenu()" class="md:hidden cursor-pointer">
+        <img src="./img/shared/icon-hamburger.svg" alt="hamburger" />
+      </div>
+    </header>
+    <main
+      class="flex flex-col lg:flex-row lg:justify-between lg:items-center max-w-4xl mx-auto w-full left-0 right-0 mt-16 gap-14"
+    >
+      <section class="flex flex-col gap-10 text-center lg:text-left md:mt-7">
+        <h2 class="tracking-[0.3rem] font-barlow text-xs lg:text-lg">
+          <span class="opacity-50">01</span> PICK YOUR DESTINATION
+        </h2>
+        <div>
+          <img
+            src="./img/destination/image-mars.png"
+            alt=""
+            class="w-44 md:w-56 lg:w-96 mx-auto lg:mx-0"
+          />
+        </div>
+      </section>
+
+      <section
+        class="flex flex-col gap-7 mx-auto lg:mx-0 text-center lg:text-left"
+      >
+        <!-- sub nav links -->
+        <ul
+          class="sub-nav-dest flex space-x-5 font-barlow text-xs tracking-wide mx-auto lg:mx-0"
+        >
+          <li
+            class="relative after:absolute after:-bottom-1 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all after:hover:w-full"
+          >
+            <a href="destination-moon.html">MOON</a>
+          </li>
+          <li
+            class="active-dest relative after:absolute after:-bottom-1 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all after:hover:w-full"
+          >
+            <a href="destination-mars.html">MARS</a>
+          </li>
+          <li
+            class="relative after:absolute after:-bottom-1 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all after:hover:w-full"
+          >
+            <a href="destination-europa.html">EUROPA</a>
+          </li>
+          <li
+            class="relative after:absolute after:-bottom-1 after:w-0 after:h-[2px] after:bg-gray-600 after:left-0 after:transition-all transition-all after:hover:w-full"
+          >
+            <a href="destination-titan.html">TITANS</a>
+          </li>
+        </ul>
+
+        <h2 class="text-7xl font-Bellefair">MARS</h2>
+        <p
+          class="max-w-xs md:max-w-sm lg:max-w-xs font-barlow text-xs tracking-wide"
+        >
+          Don't forget to pack your hiking boots. You'll need them to tackle
+          Olympus Mons - the tallest planetary mountain in our solar system.
+          It's two and a half times the size of Everest!
+        </p>
+        <hr class="opacity-25" />
+        <div class="grid md:grid-cols-2 gap-7 lg:gap-0">
+          <div class="flex flex-col gap-2">
+            <span class="text-xs font-extralight text-light-blue tracking-wide"
+              >AVG. DISTANCE</span
+            >
+            <span class="text-2xl font-medium">225 MIL. KM</span>
+          </div>
+          <div class="flex flex-col gap-2">
+            <span class="text-xs tracking-wide">EST. TRAVEL TIME</span>
+            <span class="text-2xl font-medium">3 MONTHS</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

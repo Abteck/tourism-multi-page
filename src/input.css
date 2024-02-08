@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+header ul {
+  backdrop-filter: blur(70px);
+}
+
+header ul {
+  right: 0;
+  z-index: 50;
+  right: -500px;
+  transition: 0.4s ease-in-out;
+}
+
+header ul.open {
+  right: 0;
+  opacity: 1;
+}
+
+header li.active-nav::after {
+  position: absolute;
+  background-color: white;
+  right: 0;
+  width: 100%;
+  height: 2px;
+}
+
+/* sub nav destination */
+.sub-nav-dest li.active-dest::after {
+  position: absolute;
+  background-color: white;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+/* sub nav crew */
+.crew-links a.active-crew {
+  background-color: white;
+  opacity: 100;
+}
+
+/* sub nav technology */
+.tech-links a.active-tech {
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 767px) {
+  header li.active-nav::after {
+    position: absolute;
+    background-color: white;
+    left: -6px;
+    width: 2px;
+    height: 100%;
+    top: 0;
+  }
+}
